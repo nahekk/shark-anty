@@ -1,0 +1,153 @@
+:root {
+  --bg: #0a0f1e;
+  --panel: #111a30;
+  --border: #24345a;
+  --text: #e6edf7;
+  --muted: #7d8aa5;
+  --accent: #22d3ee;
+  --danger: #f43f5e;
+  --ok: #22c55e;
+  color-scheme: dark;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 13px/1.4 'Segoe UI', system-ui, sans-serif;
+}
+.popup {
+  width: 320px;
+  padding: 12px;
+}
+header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+header img {
+  border-radius: 7px;
+}
+.title {
+  font-weight: 700;
+  font-size: 14px;
+}
+.title.big {
+  font-size: 22px;
+}
+.sub {
+  color: var(--muted);
+  font-size: 12px;
+  word-break: break-all;
+}
+section {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  padding: 9px;
+  margin-bottom: 8px;
+}
+.label {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  margin-bottom: 7px;
+  display: flex;
+  justify-content: space-between;
+}
+.count {
+  color: var(--accent);
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+button,
+.file span {
+  font: inherit;
+  color: var(--text);
+  background: #16213b;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  padding: 7px 10px;
+  cursor: pointer;
+}
+button:hover,
+.file span:hover {
+  background: #1d2a49;
+}
+button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+button.primary {
+  background: linear-gradient(180deg, #2fdcf3, #12b6d6);
+  color: #04202a;
+  border-color: transparent;
+  font-weight: 650;
+}
+button.danger {
+  color: var(--danger);
+  border-color: rgba(244, 63, 94, 0.4);
+}
+.wide {
+  width: 100%;
+}
+.msg {
+  min-height: 18px;
+  font-size: 12px;
+  color: var(--muted);
+}
+.msg.ok {
+  color: var(--ok);
+}
+.msg.err {
+  color: var(--danger);
+}
+.page main {
+  max-width: 860px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+.page textarea {
+  width: 100%;
+  height: 52vh;
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px;
+  font: 12px/1.5 Consolas, monospace;
+  resize: vertical;
+  outline: none;
+}
+.page textarea:focus {
+  border-color: var(--accent);
+}
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 12px 0;
+}
+.file input {
+  display: none;
+}
+.chk {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  color: var(--muted);
+}
+.grow {
+  flex: 1;
+}
+.page .msg {
+  font-size: 14px;
+}

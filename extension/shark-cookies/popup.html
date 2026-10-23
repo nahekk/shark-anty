@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="popup">
+    <header>
+      <img src="icons/icon48.png" width="28" height="28" alt="" />
+      <div>
+        <div class="title">Shark Cookies</div>
+        <div class="sub" id="site">-</div>
+      </div>
+    </header>
+
+    <section>
+      <div class="label">This site <span id="site-count" class="count">0</span></div>
+      <div class="grid">
+        <button id="site-copy">Copy JSON</button>
+        <button id="site-json">Save .json</button>
+        <button id="site-txt">Save .txt</button>
+        <button id="site-clear" class="danger">Delete</button>
+      </div>
+    </section>
+
+    <section>
+      <div class="label">Whole profile <span id="all-count" class="count">0</span></div>
+      <div class="grid">
+        <button id="all-copy">Copy JSON</button>
+        <button id="all-json">Save .json</button>
+        <button id="all-txt">Save .txt</button>
+      </div>
+    </section>
+
+    <section>
+      <button id="import" class="primary wide">Import cookies…</button>
+    </section>
+
+    <div id="msg" class="msg"></div>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

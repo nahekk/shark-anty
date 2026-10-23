@@ -1,0 +1,143 @@
+{
+  "name": "shark-anty",
+  "productName": "Shark{anty}",
+  "version": "1.2.0",
+  "description": "Free, open-source multi-profile browser on the newest Chromium: SOCKS5/SOCKS4/HTTP proxies, cookie import/export, editable fingerprints and Discord Rich Presence. No account, no limits.",
+  "main": "src/main/main.js",
+  "author": {
+    "name": "nah",
+    "url": "https://github.com/nahekk"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/nahekk/shark-anty",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nahekk/shark-anty.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nahekk/shark-anty/issues"
+  },
+  "keywords": [
+    "browser",
+    "multi-profile",
+    "chromium",
+    "proxy",
+    "socks5",
+    "cookies",
+    "discord-rpc",
+    "electron",
+    "fingerprint",
+    "antidetect"
+  ],
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "icons": "node scripts/build-icons.mjs",
+    "test": "node --test \"test/*.test.js\"",
+    "dist": "electron-builder --win --x64 --publish never",
+    "dist:dir": "electron-builder --win --x64 --dir --publish never",
+    "dist:mac": "electron-builder --mac --publish never",
+    "dist:linux": "electron-builder --linux --publish never"
+  },
+  "dependencies": {
+    "7zip-bin": "^5.2.0",
+    "extract-zip": "^2.0.1",
+    "socks": "^2.8.10",
+    "ws": "^8.22.0"
+  },
+  "devDependencies": {
+    "electron": "^45.0.0",
+    "electron-builder": "^26.15.3",
+    "png-to-ico": "^3.0.2",
+    "sharp": "^0.35.5"
+  },
+  "build": {
+    "appId": "com.nahekk.sharkanty",
+    "productName": "Shark{anty}",
+    "executableName": "SharkAnty",
+    "artifactName": "SharkAnty-Setup-${version}.${ext}",
+    "copyright": "Copyright © 2026 nah",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "src/**/*",
+      "extension/**/*",
+      "assets/logo.svg",
+      "assets/discord/**/*",
+      "package.json",
+      "LICENSE"
+    ],
+    "asarUnpack": [
+      "extension/**/*",
+      "assets/discord/**/*",
+      "node_modules/7zip-bin/**/*"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Shark{anty}",
+      "uninstallDisplayName": "Shark{anty}",
+      "license": "LICENSE",
+      "installerIcon": "build/icon.ico",
+      "uninstallerIcon": "build/icon.ico",
+      "installerHeaderIcon": "build/icon.ico",
+      "installerSidebar": "build/installerSidebar.bmp",
+      "uninstallerSidebar": "build/installerSidebar.bmp",
+      "runAfterFinish": true,
+      "deleteAppDataOnUninstall": false,
+      "include": "build/installer.nsh",
+      "multiLanguageInstaller": true,
+      "installerLanguages": [
+        "pl_PL",
+        "en_US"
+      ],
+      "language": "1045",
+      "displayLanguageSelector": false
+    },
+    "linux": {
+      "target": [
+        {
+          "target": "AppImage",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "build/icon.png",
+      "category": "Network",
+      "artifactName": "SharkAnty-${version}-linux-${arch}.${ext}"
+    },
+    "mac": {
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        }
+      ],
+      "icon": "build/icon.png",
+      "category": "public.app-category.productivity",
+      "identity": null,
+      "artifactName": "SharkAnty-${version}-mac-${arch}.${ext}"
+    }
+  }
+}

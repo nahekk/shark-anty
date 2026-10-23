@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0A1A3A"/>
+      <stop offset="0.55" stop-color="#0B3B6E"/>
+      <stop offset="1" stop-color="#0891B2"/>
+    </linearGradient>
+    <linearGradient id="fin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#BFEFFF"/>
+    </linearGradient>
+    <linearGradient id="wave" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#38BDF8"/>
+    </linearGradient>
+    <clipPath id="sq"><rect x="0" y="0" width="1024" height="1024" rx="230"/></clipPath>
+  </defs>
+  <g clip-path="url(#sq)">
+    <rect width="1024" height="1024" fill="url(#bg)"/>
+    <circle cx="800" cy="210" r="300" fill="#22D3EE" opacity="0.10"/>
+    <!-- braces -->
+    <path d="M250 250 C190 250 175 285 175 340 L175 440 C175 480 155 500 115 512 C155 524 175 544 175 584 L175 684 C175 739 190 774 250 774"
+          fill="none" stroke="#7DD3FC" stroke-width="44" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+    <path d="M774 250 C834 250 849 285 849 340 L849 440 C849 480 869 500 909 512 C869 524 849 544 849 584 L849 684 C849 739 834 774 774 774"
+          fill="none" stroke="#7DD3FC" stroke-width="44" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+    <!-- dorsal fin -->
+    <g transform="translate(-26 4)">
+    <path d="M300 664 C 360 600 400 450 480 340 C 540 258 640 222 736 232 C 748 233 750 244 740 250 C 660 300 610 400 618 520 C 622 580 650 630 712 664 Z" fill="url(#fin)"/>
+    <path d="M736 232 C 748 233 750 244 740 250 C 660 300 610 400 618 520 C 622 580 650 630 712 664 L 668 664 C 600 620 580 560 578 500 C 574 390 630 290 736 232 Z" fill="#0B3B6E" opacity="0.16"/>
+    </g>
+    <!-- waves -->
+    <path d="M250 680 C 305 640 360 640 415 680 C 470 720 525 720 580 680 C 635 640 690 640 745 680 C 760 690 772 698 774 700"
+          fill="none" stroke="url(#wave)" stroke-width="40" stroke-linecap="round"/>
+    <path d="M300 760 C 350 728 400 728 450 760 C 500 792 550 792 600 760 C 650 728 700 728 724 744"
+          fill="none" stroke="#22D3EE" stroke-width="28" stroke-linecap="round" opacity="0.55"/>
+  </g>
+</svg>

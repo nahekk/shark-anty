@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"
+    />
+    <title>Shark{anty}</title>
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <div class="brand drag">
+          <img src="assets/logo.png" alt="" width="26" height="26" />
+          <div class="brand-text">Shark{anty}</div>
+        </div>
+        <nav id="nav"></nav>
+        <div class="sidebar-foot" id="sidebar-foot"></div>
+      </aside>
+      <main class="main">
+        <header class="topbar drag">
+          <div id="topbar-left" class="no-drag"></div>
+          <h1 id="page-title"></h1>
+          <div id="topbar-extra" class="no-drag editor-actions"></div>
+        </header>
+        <div id="banners"></div>
+        <section id="view" class="view-host"></section>
+      </main>
+    </div>
+    <div id="modals"></div>
+    <div id="toasts"></div>
+
+    <div id="splash">
+      <div class="splash-inner">
+        <div class="splash-logo">
+          <img src="assets/logo.png" alt="" width="84" height="84" />
+          <div class="splash-ring"></div>
+        </div>
+        <div class="splash-name">Shark<span>{anty}</span></div>
+        <div class="splash-tag">Anti-detect browser</div>
+        <div class="splash-bar"><span></span></div>
+      </div>
+    </div>
+
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>

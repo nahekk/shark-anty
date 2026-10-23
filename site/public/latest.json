@@ -1,0 +1,11 @@
+{
+  "version": "1.2.0",
+  "url": "https://sha.best",
+  "notes": "",
+  "files": {
+    "win": "SharkAnty-Setup-1.2.0.exe",
+    "mac_arm": "SharkAnty-1.2.0-mac-arm64.dmg",
+    "mac_x64": "SharkAnty-1.2.0-mac-x64.dmg",
+    "linux": "SharkAnty-1.2.0-linux-x86_64.AppImage"
+  }
+}

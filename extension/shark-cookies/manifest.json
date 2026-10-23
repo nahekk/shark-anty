@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "Shark Cookies",
+  "short_name": "Shark Cookies",
+  "version": "1.2.0",
+  "description": "Import and export cookies of the current site or the whole profile (JSON / Netscape). Built into Shark{anty}.",
+  "author": "nah",
+  "homepage_url": "https://github.com/nahekk/shark-anty",
+  "permissions": [
+    "cookies",
+    "tabs",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Shark Cookies",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'none'"
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4Hpftrs+UxysG2LKb+/kGrWGxW2nBMEATjnss7HkFUb5bTY306Be4Ntu/Y9/9SlTAFWHC8vggE6Wtvhjl/FpyGEVvywTPfl2ld1m5jGVkMlqn53YY2A45rV4M2rrvvfyqIAgYpQ3PJLKnvUs+eB5m/iPQ0RWZ7nai6S1CBp77bSNw4vDb/9AN1AkbVQBipieMgXuOFrZRHcRhZGHiRP8MpZr6iGO05nYthre33tOcT5fZ+8P95OpXiBG5qGNDjggeAJaIK8r8l54m+Cy3gwVAMG3vIM06SFNPh+N7p9awMMv7FkaUyuOv8n8qvWfNXgw4beW94HJVGYYyDmZ1ZS7OQIDAQAB"
+}
